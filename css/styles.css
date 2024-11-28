@@ -3,15 +3,15 @@
 
 @font-face {
     font-family: "psych";
-    src: url("../css/psycha-font/PsychaRegular-Yq334.otf");
+    src: url("../css/morgan-flower-version-font/MorganFlowerDemoVersionRegular-mLx8V.otf");
   }
 
 body{
     font-family: "Ubuntu", sans-serif;
-    color: #ffffff;
+    color: #f8f9fa;
     min-height: 100vh;
     margin: 0;
-    background-color: #0b090a;
+    background-image: linear-gradient(to right, #000000,  #030303, #050505,  #0a0a0a, #0d0d0d, #141414, #1a1a1a, #1c1c1c, #212121);
   }
   
   .container {
@@ -30,8 +30,7 @@ body{
     top: 0; 
     width: 100%; 
     text-align: center; 
-    padding: 10px; 
-    background-color: #fff; 
+    
     z-index: 10; 
   }
 
@@ -41,7 +40,7 @@ body{
 
     .logo {
         width: 5rem;
-      fill: #44107a;
+      fill: #F371B4;
         margin-top: 1.6rem;
         
     }
@@ -52,6 +51,7 @@ body{
     margin-top: 10px;
     padding: 10px;
     font-size: 16px;
+    background-color: #f8f9fa;
   }
   
   #calendar {
@@ -71,7 +71,7 @@ body{
   }
   
   .day.logged {
-    background-color: #ff00c8;
+    background: linear-gradient(45deg,#F5799B, #F371B4, #fff800);
   }
   
   #logDisplay {
@@ -81,7 +81,7 @@ body{
 
   button {
     font-family: "psych";
-    font-size: xx-large;
+    font-size: x-large;
   }
 
   .glow-on-hover {
@@ -99,7 +99,7 @@ body{
 
 .glow-on-hover:before {
     content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg, #F371B4, #ff1361, #fff800);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -110,8 +110,9 @@ body{
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
     opacity: 0;
-    transition: opacity .3s ease-in-out;
+    transition: opacity .5s ease-in-out;
     border-radius: 10px;
+    text-align: center;
 }
 
 .glow-on-hover:active {
@@ -148,11 +149,10 @@ body{
 
 .animate-charcter
 {
-   text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #231557 0%,
-    #44107a 29%,
+    /* #231557 0%, */
+    #F371B4 29%,
     #ff1361 67%,
     #fff800 100%
   );
@@ -161,11 +161,11 @@ body{
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
+  animation: textclip 5s linear infinite;
   display: inline-block;
+  letter-spacing: 0.3rem;
       
 }
 
@@ -178,8 +178,9 @@ body{
 @media screen and (max-width: 600px) {
     .container {
         grid-template-columns: 1fr; 
-        gap: 15px; 
+        gap: 2rem; 
         margin-left: 2rem;
+        margin-top: -6rem;
         padding-right: 0;
     }
 
@@ -189,7 +190,7 @@ body{
     }
 
     .animate-charcter {
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
 
     .logo {
@@ -198,6 +199,11 @@ body{
  
     #goalSection {
         margin-left: 2rem;
+        padding-bottom: 1rem;;
+    }
+
+    #calendar {
+        padding-bottom: 1rem;
     }
 
     .day {
@@ -236,4 +242,9 @@ body{
     .animate-charcter {
         font-size: 4rem;
     }
+
+    .logo {
+        width: 6rem;
+    }
 }
+
