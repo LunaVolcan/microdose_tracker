@@ -195,8 +195,12 @@ body{
         text-align: center;
     }
 
-    header h1 {
-        font-size: 2rem; 
+    .animate-charcter {
+        font-size: 3rem;
+    }
+
+    .logo {
+        width: 3rem;
     }
  
     #goalSection {
